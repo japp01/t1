@@ -1,5 +1,6 @@
 ﻿string name;
 double salarioBruto, ventas, years, totalGanado = 0;
+double descuento = 0, salarioNeto;
 
 Console.Write("Nombre: ");
 name = Convert.ToString(Console.ReadLine());
@@ -29,9 +30,17 @@ else if (ventas > 3000)
 //descuento de impuestos
 if (years <= 3)
 {
-    totalGanado -= totalGanado * 0.065;
+    descuento = totalGanado * 0.065;
 }
 else if ( years >= 4)
 {
-    totalGanado -= totalGanado * 0.045;
+    descuento = totalGanado * 0.045;
 }
+
+salarioNeto = totalGanado - descuento;
+
+//output
+Console.WriteLine($"Nombre: {name}");
+Console.WriteLine($"Total ganado: S/{totalGanado}");
+Console.WriteLine($"Descuento: S/{descuento}");
+Console.WriteLine($"Salario neto: S/{salarioNeto}");
