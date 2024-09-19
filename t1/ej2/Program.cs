@@ -25,8 +25,9 @@ do
         case 'f':
         case 'F':
             is_finished = true;
+            break;
     }
-} while (is_finished = false);
+} while (is_finished == false);
 
 Console.WriteLine($"verde: {verde}");
 Console.WriteLine($"azul: {azul}");
